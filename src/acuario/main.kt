@@ -6,28 +6,20 @@ fun construirAcuario() {
 
     val acuario2 = Acuario(ancho = 25)
     acuario2.imprimirTamano()
+}
 
-    val acuario3 = Acuario(alto = 35, largo = 110)
-    acuario3.imprimirTamano()
+fun crearPeces() {
+    val miTiburon = Tiburon()
+    val miPezPayaso = PezPayaso()
 
-    val acuario4 = Acuario(ancho = 25, alto = 35, largo = 110)
-    acuario4.imprimirTamano()
+    println("Color del tiburón: ${miTiburon.color}")
+    println("Color del pez payaso: ${miPezPayaso.color}")
 
-    val acuario6 = Acuario(numeroDePeces = 29)
-    acuario6.imprimirTamano()
-
-    val acuario7 = Acuario(numeroDePeces = 29)
-    acuario7.imprimirTamano()
-    acuario7.volumen = 70
-    acuario7.imprimirTamano()
-
-    val acuario8 = Acuario(largo = 25, ancho = 25, alto = 40)
-    acuario8.imprimirTamano()
-
-    val miTorre = TanqueTorre(diametro = 25, alto = 40)
-    miTorre.imprimirTamano()
+    miTiburon.comer()
+    miPezPayaso.comer()
 }
 
 fun main() {
     construirAcuario()
+    crearPeces()
 }
